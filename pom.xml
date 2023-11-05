@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+
+    <groupId>org.example</groupId>
+    <artifactId>SpringMVC2</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springMVC-demo1</module>
+        <module>springMVC-demo3</module>
+        <module>springMVC-demo4</module>
+        <module>springMVC-jsp</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <name>SpringMVC2 Maven Webapp</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+
+    <!--  <dependencies>-->
+    <!--    <dependency>-->
+    <!--      <groupId>junit</groupId>-->
+    <!--      <artifactId>junit</artifactId>-->
+    <!--      <version>4.11</version>-->
+    <!--      <scope>test</scope>-->
+    <!--    </dependency>-->
+
+    <!--    &lt;!&ndash;SpringMVC &ndash;&gt;-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework</groupId>-->
+    <!--      <artifactId>spring-webmvc</artifactId>-->
+    <!--      <version>5.3.18</version>-->
+    <!--    </dependency>-->
+    <!--    &lt;!&ndash;日志&ndash;&gt;-->
+    <!--&lt;!&ndash;    <dependency>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <groupId>ch.qos.logback</groupId>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <artifactId>logback-classic</artifactId>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <version>1.4.11</version>&ndash;&gt;-->
+    <!--&lt;!&ndash;    </dependency>&ndash;&gt;-->
+    <!--    &lt;!&ndash;servletAPI&ndash;&gt;-->
+    <!--    <dependency>-->
+    <!--      <groupId>javax.servlet</groupId>-->
+    <!--      <artifactId>javax.servlet-api</artifactId>-->
+    <!--      <version>3.1.0</version>-->
+    <!--      <scope>provided</scope>-->
+    <!--    </dependency>-->
+
+    <!--    &lt;!&ndash;spring5和Thymeleaf整合包&ndash;&gt;-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.thymeleaf</groupId>-->
+    <!--      <artifactId>thymeleaf-spring5</artifactId>-->
+    <!--      <version>3.0.12.RELEASE</version>-->
+    <!--    </dependency>-->
+    <!--&lt;!&ndash;    <dependency>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <groupId>org.springframework</groupId>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <artifactId>spring-web</artifactId>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <version>6.0.13</version>&ndash;&gt;-->
+    <!--&lt;!&ndash;    </dependency>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;    <dependency>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <groupId>org.springframework</groupId>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <artifactId>spring-core</artifactId>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <version>6.0.13</version>&ndash;&gt;-->
+    <!--&lt;!&ndash;    </dependency>&ndash;&gt;-->
+
+
+    <!--  </dependencies>-->
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.1.9.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.20</version> <!-- 这里是 Spring MVC 版本 -->
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+        </dependency>
+        <!--   json相关     -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.83</version>
+        </dependency>
+
+        <!--文件上传-->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.3</version>
+        </dependency>
+        <!--servlet-api导入高版本的-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.3</version>
+        </dependency>
+
+    </dependencies>
+
+    <!--  <build>-->
+    <!--    <finalName>SpringMVC2</finalName>-->
+    <!--    <pluginManagement>&lt;!&ndash; lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) &ndash;&gt;-->
+    <!--      <plugins>-->
+    <!--        <plugin>-->
+    <!--          <artifactId>maven-clean-plugin</artifactId>-->
+    <!--          <version>3.1.0</version>-->
+    <!--        </plugin>-->
+    <!--        &lt;!&ndash; see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging &ndash;&gt;-->
+    <!--        <plugin>-->
+    <!--          <artifactId>maven-resources-plugin</artifactId>-->
+    <!--          <version>3.0.2</version>-->
+    <!--        </plugin>-->
+    <!--        <plugin>-->
+    <!--          <artifactId>maven-compiler-plugin</artifactId>-->
+    <!--          <version>3.8.0</version>-->
+    <!--        </plugin>-->
+    <!--        <plugin>-->
+    <!--          <artifactId>maven-surefire-plugin</artifactId>-->
+    <!--          <version>2.22.1</version>-->
+    <!--        </plugin>-->
+    <!--        <plugin>-->
+    <!--          <artifactId>maven-war-plugin</artifactId>-->
+    <!--          <version>3.2.2</version>-->
+    <!--        </plugin>-->
+    <!--        <plugin>-->
+    <!--          <artifactId>maven-install-plugin</artifactId>-->
+    <!--          <version>2.5.2</version>-->
+    <!--        </plugin>-->
+    <!--        <plugin>-->
+    <!--          <artifactId>maven-deploy-plugin</artifactId>-->
+    <!--          <version>2.8.2</version>-->
+    <!--        </plugin>-->
+    <!--      </plugins>-->
+    <!--    </pluginManagement>-->
+    <!--  </build>-->
+</project>

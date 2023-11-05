@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>SpringMVC2</artifactId>
+        <groupId>org.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <packaging>war</packaging> <!-- 设置打包类型为WAR -->
+
+    <artifactId>springMVC-demo3</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+<!--    <dependencies>-->
+<!--        &lt;!&ndash;SpringMVC &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-webmvc</artifactId>-->
+<!--            <version>5.3.18</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash;日志&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--            <version>1.4.11</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash;servletAPI&ndash;&gt;-->
+
+<!--        -->
+
+<!--        &lt;!&ndash; 添加你的依赖，例如Spring MVC、Servlet API等 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-web</artifactId>-->
+<!--            <version>5.3.6</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>javax.servlet</groupId>-->
+<!--            <artifactId>javax.servlet-api</artifactId>-->
+<!--            <version>4.0.1</version>-->
+<!--            <scope>provided</scope> &lt;!&ndash; Servlet API通常由Servlet容器提供，所以使用provided作用域 &ndash;&gt;-->
+<!--        </dependency>-->
+
+<!--    </dependencies>-->
+    <dependencies>
+        <!-- thymeleaf与Spring整合包 -->
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring5</artifactId>
+            <version>3.0.9.RELEASE</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source> <!-- 设置Java版本 -->
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <!-- 配置WAR插件，包括webapp目录和其他设置 -->
+                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+<!--                    <failOnMissingWebXml>false>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
